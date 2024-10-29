@@ -1,521 +1,231 @@
 <!DOCTYPE html>
-    <html lang="fr">
-        <head>
-            <meta charset="utf-8">
-            <title>Ismaël Christian DAOUDA ABASSI</title>
-            <meta content="Portfoliode Ismaël Christian DAOUDA ABASSI" name="description">
+<html lang="fr">
 
-            <!-- Favicon -->
-            <link href="img/favicon.ico" rel="icon">
+<head>
+    <meta charset="utf-8">
+    <title>Ismaël Christian DAOUDA ABASSI</title>
+    <meta content="Portfolio de Ismaël Christian DAOUDA ABASSI"
+        name="Mon portfolio Ismaël Christian DAOUDA ABASSI, electrotechnicien , Electricité ">
 
-            <!-- Polices Web de Google -->
-            <link rel="preconnect" href="https://fonts.googleapis.com">
-            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-            <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Favicon -->
+    <link src="{{ url_for('static', filename='images/favicon.ico') }}" alt="Ismaël Christian DAOUDA ABASSI">
 
-            <!-- Feuilles de style des icônes -->
-            <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-            <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
-            <!-- Feuilles de style des bibliothèques -->
-            <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-            <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
-            <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <!-- Polices Web de Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-            <!-- Feuille de style Bootstrap personnalisée -->
-            <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Feuilles de style des icônes -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
-            <!-- Feuille de style du modèle -->
-            <link href="css/style.css" rel="stylesheet">
-        </head>
+    <!-- Feuilles de style des bibliothèques -->
+    <link href="{{ url_for('static', filename='lib/owlcarousel/assets/owl.carousel.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='lib/lightbox/css/lightbox.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='lib/animate/animate.min.css') }}" rel="stylesheet">
 
-        <body>
-            <!-- Début du Spinner -->
-            <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-                <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
-                    <span class="sr-only">Chargement...</span>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Feuille de style Bootstrap personnalisée -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+
+    <!-- Feuille de style du modèle -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+    <!-- Début du Spinner -->
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Chargement...</span>
+        </div>
+    </div>
+    <!-- Fin du Spinner -->
+
+
+    <div class="container">
+        <div class="row g-5">
+
+            <div class="col-lg-4 sticky-lg-top vh-100">
+                <div class="d-flex flex-column h-100 text-center overflow-auto shadow">
+                    <img class="w-100 img-fluid mb-4" src="{{ url_for('static', filename='images/profile.png') }}"
+                        alt="Image de profil">
+
+                    <h1 class="text-primary mt-2">Ismaël Christian DAOUDA ABASSI</h1>
+                    <div class="mb-4" style="height: 22px;">
+                        <h4 class="typed-text-output d-inline-block text-light"></h4>
+                        <div class="typed-text d-none">Technicien Supérieur En Génie Électrique Et Informatique,
+                            Électrotechnicien, Data Scientist, Développeur Intelligence Artificielle</div>
+                    </div>
+                    <div class="d-flex justify-content-center mt-auto mb-3">
+                        <a class="btn btn-secondary btn-square mx-1" href="https://x.com/IsmaelAbassi1"><i
+                                class="fab fa-twitter"></i></a>
+                        <a class="btn btn-secondary btn-square mx-1"
+                            href="https://www.facebook.com/hopsyder.daouda.12062/"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-secondary btn-square mx-1" href="https://www.linkedin.com/in/ismael122"><i
+                                class="fab fa-linkedin-in"></i></a>
+                    </div>
+
+                    <div class="d-flex align-items-end justify-content-between border-top">
+                        <a href="{{ url_for('static', filename='images/CV_ismael.pdf') }}" class="btn w-50 border-end"
+                            download>Télécharger CV</a>
+                        <a href="{{ url_for('gallery') }}" class="btn w-50 btn-scroll">Diplôme</a>
+                    </div>
+
                 </div>
             </div>
-            <!-- Fin du Spinner -->
 
 
-            <div class="container">
-                <div class="row g-5">
-                    <div class="col-lg-4 sticky-lg-top vh-100">
-                        <div class="d-flex flex-column h-100 text-center overflow-auto shadow">
-                            <img class="w-100 img-fluid mb-4" src="img/profile.png" alt="Image">
-                            <h1 class="text-primary mt-2">Ismaël Christian DAOUDA ABASSI</h1>
-                            <div class="mb-4" style="height: 22px;">
-                                <h4 class="typed-text-output d-inline-block text-light"></h4>
-                                <div class="typed-text d-none">Technicien Supérieur En Génie Électrique Et Informatique, Électrotechnicien, Data Scientist, Développeur Intelligence Artificielle</div>
-                            </div>
-                            <div class="d-flex justify-content-center mt-auto mb-3">
-                                <a class="btn btn-secondary btn-square mx-1" href="https://x.com/IsmaelAbassi1"><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-secondary btn-square mx-1" href="https://www.facebook.com/hopsyder.daouda.12062/"><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-secondary btn-square mx-1" href="https://www.linkedin.com/in/ismael122"><i class="fab fa-linkedin-in"></i></a>
-                            </div>
-                            <div class="d-flex align-items-end justify-content-between border-top">
-                                <a href="img/my cv.pdf" class="btn w-50 border-end" download>Télécharger CV</a>
-                                <a href="https://drive.google.com/drive/folders/1Mq9kvqlc56sIIDfjXBabxux6qcZA95bI?usp=drive_link" class="btn w-50 btn-scroll"> Diplome</a>
+            <div class="col-lg-8">
+
+                <!-- Début de la section Portfolio -->
+                <section class="py-5 border-bottom wow fadeInUp" data-wow-delay="0.1s">
+                    <h1 class="title pb-3 mb-5">Mon Portfolio</h1>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="row">
+                                <div class="col-12 text-center mb-2">
+                                    <ul class="list-inline mb-4" id="portfolio-flters">
+                                        <li class="btn btn-secondary active" data-filter="*"><i
+                                                class="fa fa-star me-2"></i>Tous</li>
+                                        <li class="btn btn-secondary" data-filter=".webdev"><i
+                                                class="fa fa-code me-2"></i>Développement Web</li>
+                                        <li class="btn btn-secondary" data-filter=".electricity"><i
+                                                class="fa fa-bolt me-2"></i>Électricité</li>
+                                        <li class="btn btn-secondary" data-filter=".datascience"><i
+                                                class="fa fa-brain me-2"></i>Data Science</li>
+                                    </ul>
+                                </div>
                             </div>
 
+                            <div class="row portfolio-container">
+                                <!-- Projets Développement Web -->
+                                <div class="col-md-4 mb-4 portfolio-item webdev">
+                                    <div class="position-relative overflow-hidden mb-2">
+                                        <img class="img-fluid w-100"
+                                            src="{{ url_for('static', filename='images/web1.jpg') }}" alt="portfolio">
+                                        <div class="portfolio-details">
+                                            <h5 class="project-title">Site Portofilio</h5>
+                                            <a href="https://github.com/Hop-Syder/mycv" target="_blank"
+                                                class="btn btn-primary">Voir sur GitHub</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4 mb-4 portfolio-item webdev">
+                                    <div class="position-relative overflow-hidden mb-2">
+                                        <img class="img-fluid w-100"
+                                            src="{{ url_for('static', filename='images/web2.jpg') }}"
+                                            alt="Site Vitrine Entreprise">
+                                        <div class="portfolio-details">
+                                            <h5 class="project-title">Site Vitrine Entreprise</h5>
+                                            <a href="https://github.com/IsmaelAbassi/web-project2" target="_blank"
+                                                class="btn btn-primary">Voir sur GitHub</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Projets Électricité -->
+                                <div class="col-md-4 mb-4 portfolio-item electricity">
+                                    <div class="position-relative overflow-hidden mb-2">
+                                        <img class="img-fluid w-100"
+                                            src="{{ url_for('static', filename='images/elec5.jpg') }}"
+                                            alt="Plan Electrique Industrielle">
+                                        <div class="portfolio-details">
+                                            <h5 class="project-title">Plan Electrique Industrielle</h5>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4 mb-4 portfolio-item electricity">
+                                    <div class="position-relative overflow-hidden mb-2">
+                                        <img class="img-fluid w-100"
+                                            src="{{ url_for('static', filename='images/elec15.jpg') }}"
+                                            alt="Automatisation Industrielle">
+                                        <div class="portfolio-details">
+                                            <h5 class="project-title">Automatisation Industrielle</h5>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Projets Data Science -->
+                                <div class="col-md-4 mb-4 portfolio-item datascience">
+                                    <div class="position-relative overflow-hidden mb-2">
+                                        <img class="img-fluid w-100"
+                                            src="{{ url_for('static', filename='images/wiiru.jpg') }}" alt="Wiirù">
+                                        <div class="portfolio-details">
+                                            <h5 class="project-title">Wiirù</h5>
+                                            <a href="https://github.com/IsmaelAbassi/datascience-project1"
+                                                target="_blank" class="btn btn-primary">Voir sur GitHub</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4 mb-4 portfolio-item datascience">
+                                    <div class="position-relative overflow-hidden mb-2">
+                                        <img class="img-fluid w-100"
+                                            src="{{ url_for('static', filename='images/iaminds.jpg') }}" alt="IAMINDS">
+                                        <div class="portfolio-details">
+                                            <h5 class="project-title">IAMINDS</h5>
+                                            <a href="https://lablab.ai/event/benin-multimodal-ai-hackathon/iaminds/aiminds-subtitle-app"
+                                                target="_blank" class="btn btn-primary">Voir sur Lablab.ai</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-lg-8">
-                                            
-                        <!-- Début de la section Portfolio -->
-                        <section class="py-5 border-bottom wow" ">
-                            <h1 class="title pb-3 mb-5">Mon Portfolio</h1>
-                            <div class="row">
-                                <div class="col-12">
-                                    <div class="row">
-                                        <div class="col-12 text-center mb-2">
-                                            <ul class="list-inline mb-4" id="portfolio-flters">
-                                                <li class="btn btn-secondary active" data-filter="*"><i class="fa fa-star me-2"></i>Tous</li>
-                                                <li class="btn btn-secondary" data-filter=".first"><i class="fa fa-bolt me-2"></i>Electricité</li>
-                                                <li class="btn btn-secondary" data-filter=".second"><i class="fa fa-brain me-2"></i>Technologie</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="row portfolio-container">
+                </section>
+                <!-- Fin de la section Mon Portfolio -->
 
-                                        <!-- image electricite 1 -->
-                                        <div class="col-md-4 mb-4 portfolio-item first">
-                                            <div class="position-relative overflow-hidden mb-2">
-                                                <img class="img-fluid w-70" src="img/elec1.jpg" alt="">
-                                                <div class="portfolio-btn d-flex align-items-center justify-content-center">
-                                                    <a href="img/elec1.jpg" data-lightbox="portfolio">
-                                                        <i class="bi bi-plus text-light"></i>
-                                                    </a>
-                                                </div>
-                                                 
-                                            </div>
-                                        </div>
-                                        <!-- image Technologie 1 -->
-                                        <div class="col-md-4 mb-4 portfolio-item second">
-                                            <div class="position-relative overflow-hidden mb-2">
-                                                <img class="img-fluid w-70" src="img/techIA1.jpg" alt="">
-                                                <div class="portfolio-btn d-flex align-items-center justify-content-center">
-                                                    <a href="img/techIA1.jpg" data-lightbox="portfolio">
-                                                        <i class="bi bi-plus text-light"></i>
-                                                    </a>
-                                                </div>
-                                                 
-                                            </div>
-                                        </div>
-                                        
-                                        <!-- image electricite 5 -->
-                                        <div class="col-md-4 mb-4 portfolio-item first">
-                                            <div class="position-relative overflow-hidden mb-2">
-                                                <img class="img-fluid w-70" src="img/elec5.jpg" alt="">
-                                                <div class="portfolio-btn d-flex align-items-center justify-content-center">
-                                                    <a href="img/elec5.jpg" data-lightbox="portfolio">
-                                                        <i class="bi bi-plus text-light"></i>
-                                                    </a>
-                                                </div>
-                                                
-                                            </div>
-                                        </div>
+                <section class="py-5 border-bottom wow fadeInUp">
+                    <h2> <a href="gallery.html">Merci pour votre aimable attention</a></h2>
 
-                                        <!-- image Technologie 5 -->
-                                        <div class="col-md-4 mb-4 portfolio-item second">
-                                            <div class="position-relative overflow-hidden mb-2">
-                                                <img class="img-fluid w-70" src="img/location.png" alt="">
-                                                <div class="portfolio-btn d-flex align-items-center justify-content-center">
-                                                    <a href="img/location.png" data-lightbox="portfolio">
-                                                        <i class="bi bi-plus text-light"></i>
-                                                    </a>
-                                                </div>
-                                                 
-                                            </div>
-                                        </div>
-                                        <!-- image electricite 6 -->
-                                        <div class="col-md-4 mb-4 portfolio-item first">
-                                            <div class="position-relative overflow-hidden mb-2">
-                                                <img class="img-fluid w-70" src="img/elec6.jpg" alt="">
-                                                <div class="portfolio-btn d-flex align-items-center justify-content-center">
-                                                    <a href="img/elec6.jpg" data-lightbox="portfolio">
-                                                        <i class="bi bi-plus text-light"></i>
-                                                    </a>
-                                                </div>
-                                                 
-                                            </div>
-                                        </div>
-                                        <!-- image Technologie 6 -->
-                                        <div class="col-md-4 mb-4 portfolio-item second">
-                                            <div class="position-relative overflow-hidden mb-2">
-                                                <img class="img-fluid w-70" src="img/boutique.png" alt="">
-                                                <div class="portfolio-btn d-flex align-items-center justify-content-center">
-                                                    <a href="img/boutique.png" data-lightbox="portfolio">
-                                                        <i class="bi bi-plus text-light"></i>
-                                                    </a>
-                                                </div> 
-                                            
-                                            </div>
-                                        </div>
-                                        
-                                         <!-- image electricite 7 -->
-                                         <div class="col-md-4 mb-4 portfolio-item first">
-                                            <div class="position-relative overflow-hidden mb-2">
-                                                <img class="img-fluid w-70" src="img/elec7.jpg" alt="">
-                                                <div class="portfolio-btn d-flex align-items-center justify-content-center">
-                                                    <a href="img/elec7.jpg" data-lightbox="portfolio">
-                                                        <i class="bi bi-plus text-light"></i>
-                                                    </a>
-                                                </div>
-                                                
-                                            </div>
-                                        </div>
-                                        <!-- image Technologie 6 -->
-                                        <div class="col-md-4 mb-4 portfolio-item second">
-                                            <div class="position-relative overflow-hidden mb-2">
-                                                <img class="img-fluid w-70" src="img/INDUSTRIE.png" alt="">
-                                                <div class="portfolio-btn d-flex align-items-center justify-content-center">
-                                                    <a href="img/INDUSTRIE.png" data-lightbox="portfolio">
-                                                        <i class="bi bi-plus text-light"></i>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                         <!-- image electricite 8 -->
-                                         <div class="col-md-4 mb-4 portfolio-item first">
-                                            <div class="position-relative overflow-hidden mb-2">
-                                                <img class="img-fluid w-70" src="img/elec8.jpg" alt="">
-                                                <div class="portfolio-btn d-flex align-items-center justify-content-center">
-                                                    <a href="img/elec8.jpg" data-lightbox="portfolio">
-                                                        <i class="bi bi-plus text-light"></i>
-                                                    </a>
-                                                </div>
-                                                
-                                            </div>
-                                        </div>
-                                        <!-- image Technologie 9 -->
-                                        <div class="col-md-4 mb-4 portfolio-item second">
-                                            <div class="position-relative overflow-hidden mb-2">
-                                                <img class="img-fluid w-70" src="img/KLEAN.png" alt="">
-                                                <div class="portfolio-btn d-flex align-items-center justify-content-center">
-                                                    <a href="img/KLEAN.png" data-lightbox="portfolio">
-                                                        <i class="bi bi-plus text-light"></i>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- image electricite 10 -->
-                                        <div class="col-md-4 mb-4 portfolio-item first">
-                                            <div class="position-relative overflow-hidden mb-2">
-                                                <img class="img-fluid w-70" src="img/elec10.jpg" alt="">
-                                                <div class="portfolio-btn d-flex align-items-center justify-content-center">
-                                                    <a href="img/elec10.jpg" data-lightbox="portfolio">
-                                                        <i class="bi bi-plus text-light"></i>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- image Technologie 10 -->
-                                        <div class="col-md-4 mb-4 portfolio-item second">
-                                            <div class="position-relative overflow-hidden mb-2">
-                                                <img class="img-fluid w-70" src="img/MEDECINE.png" alt="">
-                                                <div class="portfolio-btn d-flex align-items-center justify-content-center">
-                                                    <a href="img/MEDECINE.png" data-lightbox="portfolio">
-                                                        <i class="bi bi-plus text-light"></i>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
+                </section>
 
-                                        <!-- image electricite 11 -->
-                                        <div class="col-md-4 mb-4 portfolio-item first">
-                                            <div class="position-relative overflow-hidden mb-2">
-                                                <img class="img-fluid w-70" src="img/elec11.jpg" alt="">
-                                                <div class="portfolio-btn d-flex align-items-center justify-content-center">
-                                                    <a href="img/elec11.jpg" data-lightbox="portfolio">
-                                                        <i class="bi bi-plus text-light"></i>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- image Technologie 11 -->
-                                        <div class="col-md-4 mb-4 portfolio-item second">
-                                            <div class="position-relative overflow-hidden mb-2">
-                                                <img class="img-fluid w-70" src="img/MON PORFOLIO3.png" alt="">
-                                                <div class="portfolio-btn d-flex align-items-center justify-content-center">
-                                                    <a href="img/MON PORFOLIO3.png" data-lightbox="portfolio">
-                                                        <i class="bi bi-plus text-light"></i>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
+                <!-- Footer Start -->
+                <section class="wow fadeIn" data-wow-delay="0.1s">
+                    <div class="bg-secondary text-light text-center p-5">
+                        <div class="d-flex justify-content-center mb-4">
+                            <a class="btn btn-dark btn-square mx-1" href="https://x.com/IsmaelAbassi1"><i
+                                    class="fab fa-twitter"></i></a>
+                            <a class="btn btn-dark btn-square mx-1"
+                                href="https://www.facebook.com/hopsyder.daouda.12062/"><i
+                                    class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-dark btn-square mx-1" href="https://www.linkedin.com/in/ismael122"><i
+                                    class="fab fa-linkedin-in"></i></a>
+                        </div>
 
-                                        <!-- image electricite 12 -->
-                                        <div class="col-md-4 mb-4 portfolio-item first">
-                                            <div class="position-relative overflow-hidden mb-2">
-                                                <img class="img-fluid w-70" src="img/elec12.jpg" alt="">
-                                                <div class="portfolio-btn d-flex align-items-center justify-content-center">
-                                                    <a href="img/elec12.jpg" data-lightbox="portfolio">
-                                                        <i class="bi bi-plus text-light"></i>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- image Technologie 12 -->
-                                        <div class="col-md-4 mb-4 portfolio-item second">
-                                            <div class="position-relative overflow-hidden mb-2">
-                                                <img class="img-fluid w-70" src="img/MONPORTFOLIO2.png" alt="">
-                                                <div class="portfolio-btn d-flex align-items-center justify-content-center">
-                                                    <a href="img/MONPORTFOLIO2.png" data-lightbox="portfolio">
-                                                        <i class="bi bi-plus text-light"></i>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <!-- image electricite 13 -->
-                                        <div class="col-md-4 mb-4 portfolio-item first">
-                                            <div class="position-relative overflow-hidden mb-2">
-                                                <img class="img-fluid w-70" src="img/elec13.jpg" alt="">
-                                                <div class="portfolio-btn d-flex align-items-center justify-content-center">
-                                                    <a href="img/elec13.jpg" data-lightbox="portfolio">
-                                                        <i class="bi bi-plus text-light"></i>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- image Technologie 13 -->
-                                        <div class="col-md-4 mb-4 portfolio-item second">
-                                            <div class="position-relative overflow-hidden mb-2">
-                                                <img class="img-fluid w-70" src="img/NETTOYE-MOI.png" alt="">
-                                                <div class="portfolio-btn d-flex align-items-center justify-content-center">
-                                                    <a href="img/NETTOYE-MOI.png" data-lightbox="portfolio">
-                                                        <i class="bi bi-plus text-light"></i>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <!-- image electricite 14 
-                                        <div class="col-md-4 mb-4 portfolio-item first">
-                                            <div class="position-relative overflow-hidden mb-2">
-                                                <img class="img-fluid w-70" src="img/elec14.jpg" alt="">
-                                                <div class="portfolio-btn d-flex align-items-center justify-content-center">
-                                                    <a href="img/elec14.jpg" data-lightbox="portfolio">
-                                                        <i class="bi bi-plus text-light"></i>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>-->
-                                        <!-- image Technologie 14 -->
-                                        <div class="col-md-4 mb-4 portfolio-item second">
-                                            <div class="position-relative overflow-hidden mb-2">
-                                                <img class="img-fluid w-70" src="img/perruque.png" alt="">
-                                                <div class="portfolio-btn d-flex align-items-center justify-content-center">
-                                                    <a href="img/perruque.png" data-lightbox="portfolio">
-                                                        <i class="bi bi-plus text-light"></i>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <!-- image electricite 15 -->
-                                        <div class="col-md-4 mb-4 portfolio-item first">
-                                            <div class="position-relative overflow-hidden mb-2">
-                                                <img class="img-fluid w-70" src="img/elec15.jpg" alt="">
-                                                <div class="portfolio-btn d-flex align-items-center justify-content-center">
-                                                    <a href="img/elec15.jpg" data-lightbox="portfolio">
-                                                        <i class="bi bi-plus text-light"></i>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- image Technologie 15 -->
-                                        <div class="col-md-4 mb-4 portfolio-item second">
-                                            <div class="position-relative overflow-hidden mb-2">
-                                                <img class="img-fluid w-70" src="img/securite.png" alt="">
-                                                <div class="portfolio-btn d-flex align-items-center justify-content-center">
-                                                    <a href="img/securite.png" data-lightbox="portfolio">
-                                                        <i class="bi bi-plus text-light"></i>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <!-- image electricite 16 -->
-                                        <div class="col-md-4 mb-4 portfolio-item first">
-                                            <div class="position-relative overflow-hidden mb-2">
-                                                <img class="img-fluid w-70" src="img/elec16.jpg" alt="">
-                                                <div class="portfolio-btn d-flex align-items-center justify-content-center">
-                                                    <a href="img/elec16.jpg" data-lightbox="portfolio">
-                                                        <i class="bi bi-plus text-light"></i>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- image Technologie 16 -->
-                                        <div class="col-md-4 mb-4 portfolio-item second">
-                                            <div class="position-relative overflow-hidden mb-2">
-                                                <img class="img-fluid w-70" src="img/solaire.png" alt="">
-                                                <div class="portfolio-btn d-flex align-items-center justify-content-center">
-                                                    <a href="img/solaire.png" data-lightbox="portfolio">
-                                                        <i class="bi bi-plus text-light"></i>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <!-- image electricite 17 -->
-                                        <div class="col-md-4 mb-4 portfolio-item first">
-                                            <div class="position-relative overflow-hidden mb-2">
-                                                <img class="img-fluid w-70" src="img/elec17.jpg" alt="">
-                                                <div class="portfolio-btn d-flex align-items-center justify-content-center">
-                                                    <a href="img/elec17.jpg" data-lightbox="portfolio">
-                                                        <i class="bi bi-plus text-light"></i>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- image Technologie 17 -->
-                                        <div class="col-md-4 mb-4 portfolio-item second">
-                                            <div class="position-relative overflow-hidden mb-2">
-                                                <img class="img-fluid w-70" src="img/boutique1.png" alt="">
-                                                <div class="portfolio-btn d-flex align-items-center justify-content-center">
-                                                    <a href="img/boutique1.png" data-lightbox="portfolio">
-                                                        <i class="bi bi-plus text-light"></i>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <!-- image electricite 18 -->
-                                        <div class="col-md-4 mb-4 portfolio-item first">
-                                            <div class="position-relative overflow-hidden mb-2">
-                                                <img class="img-fluid w-70" src="img/elec18.jpg" alt="">
-                                                <div class="portfolio-btn d-flex align-items-center justify-content-center">
-                                                    <a href="img/elec18.jpg" data-lightbox="portfolio">
-                                                        <i class="bi bi-plus text-light"></i>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- image Technologie 18 -->
-                                        <div class="col-md-4 mb-4 portfolio-item second">
-                                            <div class="position-relative overflow-hidden mb-2">
-                                                <img class="img-fluid w-70" src="img/boutique3.png" alt="">
-                                                <div class="portfolio-btn d-flex align-items-center justify-content-center">
-                                                    <a href="img/boutique3.png" data-lightbox="portfolio">
-                                                        <i class="bi bi-plus text-light"></i>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <!-- image electricite 19 -->
-                                        <div class="col-md-4 mb-4 portfolio-item first">
-                                            <div class="position-relative overflow-hidden mb-2">
-                                                <img class="img-fluid w-70" src="img/elec19.jpg" alt="">
-                                                <div class="portfolio-btn d-flex align-items-center justify-content-center">
-                                                    <a href="img/elec19.jpg" data-lightbox="portfolio">
-                                                        <i class="bi bi-plus text-light"></i>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <!-- image electricite 20 
-                                        <div class="col-md-4 mb-4 portfolio-item first">
-                                            <div class="position-relative overflow-hidden mb-2">
-                                                <img class="img-fluid w-70" src="img/elec20.jpg" alt="">
-                                                <div class="portfolio-btn d-flex align-items-center justify-content-center">
-                                                    <a href="img/elec20.jpg" data-lightbox="portfolio">
-                                                        <i class="bi bi-plus text-light"></i>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div> -->
-
-                                        <!-- image electricite 21 -->
-                                        <div class="col-md-4 mb-4 portfolio-item first">
-                                            <div class="position-relative overflow-hidden mb-2">
-                                                <img class="img-fluid w-70" src="img/elec21.jpg" alt="">
-                                                <div class="portfolio-btn d-flex align-items-center justify-content-center">
-                                                    <a href="img/elec21.jpg" data-lightbox="portfolio">
-                                                        <i class="bi bi-plus text-light"></i>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <!-- image electricite 22 
-                                        <div class="col-md-4 mb-4 portfolio-item first">
-                                            <div class="position-relative overflow-hidden mb-2">
-                                                <img class="img-fluid w-70" src="img/elec22.jpg" alt="">
-                                                <div class="portfolio-btn d-flex align-items-center justify-content-center">
-                                                    <a href="img/elec22.jpg" data-lightbox="portfolio">
-                                                        <i class="bi bi-plus text-light"></i>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>-->
-
-                                        <!-- image electricite 23 -->
-                                        <div class="col-md-4 mb-4 portfolio-item first">
-                                            <div class="position-relative overflow-hidden mb-2">
-                                                <img class="img-fluid w-70" src="img/elec23.jpg" alt="">
-                                                <div class="portfolio-btn d-flex align-items-center justify-content-center">
-                                                    <a href="img/elec23.jpg" data-lightbox="portfolio">
-                                                        <i class="bi bi-plus text-light"></i>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
-                        <!-- Fin de la section Mon Portfolio -->
-
-                        <section class="py-5 border-bottom wow fadeInUp">
-                            <h2> <a href="gallery.html">Merci pour votre aimable attention</a></h2>
-                        
-                        </section>
-
-                        <!-- Footer Start -->
-                        <section class="wow fadeIn" data-wow-delay="0.1s">
-                            <div class="bg-secondary text-light text-center p-5">
-                                <div class="d-flex justify-content-center mb-4">
-                                    <a class="btn btn-dark btn-square mx-1" href="https://x.com/IsmaelAbassi1"><i class="fab fa-twitter"></i></a>
-                                    <a class="btn btn-dark btn-square mx-1" href="https://www.facebook.com/hopsyder.daouda.12062/"><i class="fab fa-facebook-f"></i></a>
-                                    <a class="btn btn-dark btn-square mx-1" href="https://www.linkedin.com/in/ismael122"><i class="fab fa-linkedin-in"></i></a>
-                                </div>
-                                
-                                <p class="m-0">&copy; All Rights Reserved. Designed by <a href="https://">Nexus Partners</a></p>
-                            </div>
-                        </section>
-                        <!-- Footer End -->
+                        <p class="m-0">&copy; All Rights Reserved. Designed by <a href="https://">Nexus Partners</a></p>
                     </div>
-                </div>
+                </section>
+                <!-- Footer End -->
             </div>
 
-            
-            <!-- Back to Top -->
-            <a href="#" class="back-to-top"><i class="fa fa-angle-double-up"></i></a>
-            
-            <!-- JavaScript Libraries -->
-            <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-            <script src="lib/wow/wow.min.js"></script>
-            <script src="lib/typed/typed.min.js"></script>
-            <script src="lib/easing/easing.min.js"></script>
-            <script src="lib/waypoints/waypoints.min.js"></script>
-            <script src="lib/counterup/counterup.min.js"></script>
-            <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-            <script src="lib/isotope/isotope.pkgd.min.js"></script>
-            <script src="lib/lightbox/js/lightbox.min.js"></script>
+        </div>
+    </div>
 
-            <!-- Contact Javascript File -->
-            <script src="mail/jqBootstrapValidation.min.js"></script>
-            <script src="mail/contact.js"></script>
 
-            <!-- Template Javascript -->
-            <script src="js/main.js"></script>
-        </body>
-    </html>
+    <!-- Back to Top -->
+    <a href="#" class="back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="{{ url_for('static', filename='lib/wow/wow.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='lib/typed/typed.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='lib/easing/easing.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='lib/waypoints/waypoints.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='lib/counterup/counterup.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='lib/owlcarousel/owl.carousel.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='lib/isotope/isotope.pkgd.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='lib/lightbox/js/lightbox.min.js') }}"></script>
+
+
+    <!-- Template Javascript -->
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+
+</html>
