@@ -1,38 +1,67 @@
-# Ismaël Christian DAOUDA ABASSI
+# Portfolio_1
 
-Bienvenue sur le dépôt GitHub de mon site web personnel. Ce site présente mon parcours professionnel, mes compétences et mes services en tant que technicien supérieur en génie électrique et informatique.
+Bienvenue sur le dépôt officiel de mon portfolio personnel.
 
-## À propos de moi
+Ce projet met en avant mon parcours professionnel, mes compétences et mes réalisations en génie électrique, informatique et développement web.
 
-Je suis Ismaël Christian DAOUDA ABASSI, un technicien supérieur en génie électrique et informatique basé à Séoul, Corée du Sud. Mon expertise couvre le développement web, les installations électriques et les outils d'intelligence artificielle.
+## Aperçu
 
-## Contenu du site
+Ce portfolio est une application web développée avec Python (Flask) et déployée sur Vercel. Il permet de présenter mes projets, mes certifications et mon CV de manière professionnelle et interactive.
 
-- **Portfolio** : Découvrez mes projets et réalisations
-- **Certifications** : Consultez mes certifications professionnelles
-- **Télécharger CV** : Téléchargez mon CV pour plus de détails sur mon parcours
+## Fonctionnalités
+
+- Présentation de mon parcours et de mes compétences
+- Galerie de projets réalisés
+- Section certifications
+- Téléchargement du CV
 
 ## Technologies utilisées
 
-- HTML
-- CSS
+- Python (Flask)
+- HTML5, CSS3, SCSS
 - JavaScript
-- [Ajouter d'autres technologies si nécessaire]
 
-## Installation
+## Structure du projet
 
-1. Clonez le dépôt :
-   ```bash
-   git clone https://github.com/votre-utilisateur/da-christian.git
-   ```
+```
+Portfolio_1/
+│
+├── app.py                # Point d’entrée de l’application web (serveur Flask)
+├── requirements.txt      # Liste des dépendances Python
+├── vercel.json           # Configuration pour le déploiement Vercel
+├── README.md             # Documentation du projet
+│
+├── static/               # Fichiers statiques (CSS, JS, images)
+│   ├── css/
+│   ├── js/
+│   └── images/
+│
+└── templates/            # Templates HTML pour le rendu des pages
+    ├── base.html
+    ├── index.html
+    └── ...
+```
 
-2. Accédez au répertoire du projet :
-   ```bash
-   cd da-christian
-   ```
+## Installation locale
 
-3. Ouvrez le fichier `index.html` dans votre navigateur pour voir le site en local.
+```bash
+git clone https://github.com/Hop-Syder/Portfolio_1.git
+cd Portfolio_1
+pip install -r requirements.txt
+python app.py
+```
+
+Accédez ensuite à [http://localhost:5000](http://localhost:5000) dans votre navigateur.
+
+## Déploiement
+
+Le projet est prêt pour un déploiement sur Vercel grâce au fichier `vercel.json`.
+
+## Auteur
+
+Ismaël Christian DAOUDA ABASSI | Hops-Syder
+[Mon profil GitHub](https://github.com/Hop-Syder)
 
 ## Contact
 
-Pour toute question ou collaboration, vous pouvez me contacter via mon site web.
+Pour toute question ou proposition de collaboration, merci de passer par la page de contact du site ou via GitHub.
